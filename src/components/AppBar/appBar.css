@@ -1,0 +1,44 @@
+.container-bar {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    align-items: center;
+    padding: 16px 24px 16px 24px;
+    border-bottom: #ECEFF3 1px solid;
+    position: fixed;
+    z-index: 100;
+}
+.content-icons {
+    display: flex;
+    gap: 16px;
+}
+.spacing {
+    flex: 1;
+}
+.user-container {
+    display: flex; 
+    gap: 8px;
+}
+.user-text {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+.user-name {
+    font-weight: 600;
+}
+.company {
+    font-weight: 400;
+}
+.icon-right {
+    display: none;
+}
+@media (max-width: 1007px) {
+    .user-text {
+        display: none;
+    }
+    .icon-right {
+        display: initial;
+    }
+}

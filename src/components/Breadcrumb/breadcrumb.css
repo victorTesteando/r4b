@@ -1,0 +1,6 @@
+.MuiBreadcrumbs-separator {
+    margin: 0px !important;
+}
+.selected-path {
+    font-weight: 600;
+}

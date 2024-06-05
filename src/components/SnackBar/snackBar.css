@@ -1,0 +1,23 @@
+.MuiSnackbarContent-root {
+    box-shadow: 0px 5px 10px 0px #2122240A;
+    background-color: var(--color-dark);
+    border-radius: 12px;
+    width: 100%;
+    padding: 16px;
+    font-weight: 600;
+}
+.MuiSnackbarContent-message  {
+    width: 100%;
+}
+.content-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-text {
+    display: flex;
+    gap: 8px;
+}
+.close-button {
+    cursor: pointer;
+}

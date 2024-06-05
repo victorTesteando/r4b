@@ -1,0 +1,21 @@
+.table-tr {
+    height: 72px;
+}
+.table-th {
+    text-align: left;
+    border-bottom: 1px solid #ECEFF3;
+    height: 24px;
+}
+.table-th > img {
+    position: relative;
+    top: 7px
+}
+.table {
+    border-collapse: collapse;
+}
+.table-td {
+    height: 56px;
+}
+.table-td {
+    border-bottom: 1px solid #ECEFF3;
+}

@@ -1,0 +1,29 @@
+.form-collaborators {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex-basis: content;
+}
+.form-collaborators-item {
+    flex: 1 117px;
+}
+.error-text {
+    padding: 8px 16px 8px 16px;
+}
+.MuiInputBase-input {
+    background-color: #fff;
+    border-radius: 7px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+.css-e4w4as-MuiFormLabel-root-MuiInputLabel-root , .Mui-focused {
+    color: var(--color-secondary) !important;
+    /* font-size: 12px; */
+    line-height: 15.6px;
+}
+.css-e4w4as-MuiFormLabel-root-MuiInputLabel-root {
+    color: var(--color-secondary);
+}
+.css-hwkq3c-MuiInputBase-root-MuiFilledInput-root::before {
+    content: none;
+}
