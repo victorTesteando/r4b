@@ -1,0 +1,30 @@
+.container-new-orders {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.container-summary {
+    border-radius: 8px;
+    border: 1px solid #D6D9DF;
+    background-color: #F9F9F9;
+    padding: 16px;
+}
+.content-summary {
+    display: flex;
+    justify-content: space-between;
+}
+.status-order, .total-collaboratos, .total-credits {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+.breakdown {
+    display: flex;
+    gap: 4px;
+}
+.title {
+    font-weight: 600;
+}
+.value {
+    text-align: right;
+}

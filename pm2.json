@@ -1,0 +1,10 @@
+{
+  "name": "rappi-for-business-web",
+  "script": "node_modules/next/dist/bin/next",
+  "out_file": "/var/log/pm2/access.log",
+  "error_file": "/var/log/pm2/error.log",
+  "args": "start",
+  "cwd": "./",
+  "instances": "max",
+  "exec_mode": "cluster"
+}

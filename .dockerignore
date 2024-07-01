@@ -1,0 +1,7 @@
+*.md
+Dockerfile
+Dockerfile.*
+bitbucket-pipelines.yml
+docker-compose.yml
+sonar-project.properties
+package-lock.json

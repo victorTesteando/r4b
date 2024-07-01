@@ -1,0 +1,16 @@
+version: '3'
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.testing
+    volumes:
+      - ${MY_WORKSPACE}:/ws
+    working_dir: /ws${WORKSPACE_PATH:-/}
+    user: ${MY_USER:-root}
+    environment:
+      NEXUS_USERNAME: ${NEXUS_USERNAME}
+      NEXUS_PASSWORD: ${NEXUS_PASSWORD}
+      NEXUS_URL: ${NEXUS_URL}
+      CHROME_BIN: /usr/bin/google-chrome
+    command: sh -c 'npm i && npm run lint'

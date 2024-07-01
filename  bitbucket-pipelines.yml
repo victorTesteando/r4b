@@ -1,0 +1,29 @@
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:18.17.0
+
+options:
+  max-time: 15
+pipelines:
+  tags:
+    '**':
+      - step:
+          name: Autogenerate CHANGELOG.md
+          script:
+            - git config user.email $USER
+            - git remote set-url origin https://$USER_NAME:$PASSWORD@bitbucket.org/rappinc/rappi-for-business-web.git
+            - git fetch origin master
+            - git checkout -b master
+            - CURRENT_TAG=$(git describe --abbrev=0 --tags)
+            - PREVIOUS_TAG=$(git describe --abbrev=0 --tags $CURRENT_TAG^)
+            - COMMITS=$(git log $PREVIOUS_TAG..HEAD --format="* %s - %ae" --no-merges --invert-grep --grep="skip ci")
+            - DAY=`date +%d-%m-%Y`
+            - echo -e "## [$CURRENT_TAG ($DAY)](https://bitbucket.org/rappinc/rappi-for-business-web/commits/tag/$CURRENT_TAG)\n$COMMITS\n" | cat - CHANGELOG.md > temp && mv temp CHANGELOG.md
+            - npm install -g npe
+            - npe version "$CURRENT_TAG"
+            - git add .
+            - git commit -m "[skip ci] Updated CHANGELOG.md with latest changes of $CURRENT_TAG"
+            - git push origin master
+definitions:
+  services:
+    docker:
+      memory: 12000

@@ -1,0 +1,1 @@
+export const getOriginURL = (path : string) => window.origin + path;
